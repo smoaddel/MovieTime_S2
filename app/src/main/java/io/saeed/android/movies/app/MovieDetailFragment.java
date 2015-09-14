@@ -44,7 +44,7 @@ import com.squareup.picasso.Picasso;
  */
 public class MovieDetailFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {
     public static final String MOVIE_DETAIL_URI = "movie_detail_uri";
-
+    public final String MOVIE_SHARE_HASHTAG = "#MovieTime";
     // Trailer projection
     public static final String[] TRAILER_PROJECTION = {
             MovieContract.TrailerEntry._ID,
@@ -73,7 +73,7 @@ public class MovieDetailFragment extends Fragment implements LoaderManager.Loade
     public static final int INDEX_REVIEW_CONTENT = 2;
     public static final int INDEX_REVIEW_URL = 3;
 
-
+    private ShareActionProvider mShareActionProvider;
     private ImageView mMoviePoster;
     private TextView mMovieTitle;
     private TextView mMovieOverview;
@@ -275,6 +275,10 @@ public class MovieDetailFragment extends Fragment implements LoaderManager.Loade
                         getView().findViewById(R.id.movie_release_date_holder).setVisibility(View.INVISIBLE);
                     }
 
+                    if (mShareActionProvider != null) {
+                        mShareActionProvider.setShareIntent(createShareIntent(ContentUris.parseId(mUri)));
+                    }
+
                     AppCompatActivity activity = (AppCompatActivity) getActivity();
                     Toolbar toolbarView = (Toolbar) getView().findViewById(R.id.detail_toolbar);
 
@@ -333,6 +337,41 @@ public class MovieDetailFragment extends Fragment implements LoaderManager.Loade
                             getString(R.string.favorites_removed),
                     Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void finishCreatingMenu(Menu menu, final Cursor cursor) {
+        // Locate MenuItem with ShareActionProvider
+        MenuItem shareItem = menu.findItem(R.id.action_share);
+        mShareActionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(shareItem);
+        long extMovieId = cursor.getLong(MovieGridFragment.MOVIE_ID);
+        setShareIntent(createShareIntent(extMovieId));
+    }
+
+    private void setShareIntent(Intent shareIntent) {
+        if (mShareActionProvider != null) {
+            mShareActionProvider.setShareIntent(shareIntent);
+        } else {
+            Log.d(LOG_TAG, "Share Action provider is null?");
+        }
+    }
+
+    private Intent createShareIntent(long extMovieId) {
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+        shareIntent.setType("text/plain");
+        String urlToShare;
+        Cursor cursor = mTrailersAdapter.getCursor();
+        if (null != cursor
+                && cursor.getCount() > 0
+                && cursor.moveToFirst()) {
+            String trailerKey = cursor.getString(INDEX_TRAILER_KEY);
+            urlToShare = Utility.getTrailerUrl(trailerKey);
+        } else {
+            urlToShare = getMovieUrl(extMovieId);
+        }
+        shareIntent.putExtra(Intent.EXTRA_TEXT, getString(
+                R.string.movie_share_string, urlToShare, MOVIE_SHARE_HASHTAG));
+        return shareIntent;
     }
 
     @Override
