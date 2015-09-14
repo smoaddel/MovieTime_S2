@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="movie_two_pane_grid_width">450dp</dimen>
+</resources>

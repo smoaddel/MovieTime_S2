@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="movie_rating">#FF0</color>
+    <!-- Material design colors -->
+    <color name="primary">#2196F3</color>
+    <color name="primary_dark">#1B5E20</color>
+    <color name="primary_light">#E8F5E9</color>
+    <color name="accent">#00C853</color>
+    <color name="movie_full_star">#FFEB3B</color>
+    <color name="movie_partial_star">#FFF176</color>
+    <color name="movie_empty_star">#FFFDE7</color>
+    <color name="primary_detail">#0d47a1</color>
+
+    <!-- Alpha color for touching selection -->
+    <color name="primary_detail_alpha">#9900796B</color>
+
+</resources>

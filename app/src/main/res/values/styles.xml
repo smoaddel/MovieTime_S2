@@ -1,0 +1,98 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="toolbarStyle">@style/Toolbar</item>
+    </style>
+
+    <style name="Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="popupTheme">@style/Theme.AppCompat.Light</item>
+    </style>
+
+    <!-- Settings Activity Theme. -->
+    <style name="SettingsTheme" parent="AppTheme"></style>
+
+    <!-- Base Movie Text Style -->
+    <style name="Movie.BaseText" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textSize">@dimen/movie_empty_text_size</item>
+        <item name="android:padding">@dimen/movie_empty_padding</item>
+    </style>
+
+    <!-- Empty Movie Text Style -->
+    <style name="Movie.Empty" parent="Movie.BaseText">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">@dimen/movie_title_size</item>
+    </style>
+
+    <!-- Empty Movie Lists -->
+    <style name="Movie.Empty.Lists" parent="Movie.Empty">
+        <item name="android:textSize">@dimen/movie_empty_lists_size</item>
+    </style>
+
+    <!-- Movie title style -->
+    <style name="Movie.Title" parent="Movie.BaseText">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/movie_title_size</item>
+        <item name="android:textAppearance">?android:textAppearanceLarge</item>
+    </style>
+
+    <!-- Movie rating text style in detail view -->
+    <style name="Movie.Rating" parent="Movie.BaseText">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:padding">@dimen/movie_rating_number_padding</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/movie_rating_number_size</item>
+        <item name="android:elevation">@dimen/movie_detail_elevation</item>
+    </style>
+
+    <!-- Movie release date in detail view -->
+    <style name="Movie.ReleaseDate" parent="Movie.BaseText">
+        <item name="android:textSize">@dimen/movie_detail_release_size</item>
+        <item name="android:paddingTop">@dimen/movie_overview_padding_top</item>
+    </style>
+
+    <!-- Movie overview in detail view -->
+    <style name="Movie.Overview" parent="Movie.BaseText">
+        <item name="android:textSize">@dimen/movie_overview_size</item>
+        <item name="android:paddingTop">@dimen/movie_overview_padding_top</item>
+    </style>
+
+    <!-- Movie trailers or reviews title in detail view -->
+    <style name="Movie.Headers" parent="Movie.Overview">
+
+    </style>
+
+    <!-- Movie trailer name -->
+    <style name="Movie.TrailerName" parent="Movie.BaseText">
+
+    </style>
+
+    <!-- Movie review author-->
+    <style name="Movie.ReviewBase" parent="Movie.BaseText">
+        <item name="android:textSize">@dimen/movie_review_text_size</item>
+    </style>
+
+    <style name="Movie.ReviewAuthor" parent="Movie.ReviewBase">
+
+    </style>
+
+    <!-- Movie review content-->
+    <style name="Movie.ReviewContent" parent="Movie.ReviewBase">
+        <item name="android:textSize">@dimen/movie_review_content_size</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!-- Movie grid style -->
+    <style name="MovieGridStyle">
+        <!-- Dummy movie grid style. -->
+    </style>
+
+</resources>

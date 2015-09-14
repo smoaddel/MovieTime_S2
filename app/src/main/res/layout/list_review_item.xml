@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:minHeight="?attr/listPreferredItemHeight"
+    android:layout_height="wrap_content">
+    <TextView
+        tools:text="A movie review by Phileas Fogg"
+        style="@style/Movie.ReviewAuthor"
+        android:id="@+id/movie_review_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/movie_review_content"
+        style="@style/Movie.ReviewContent"
+        android:layout_width="match_parent"
+        tools:text="Fabulous action movie. Lots of interesting characters. They don't make many movies like this. The whole movie from start to finish was entertaining I'm looking forward to seeing it again. I definitely recommend seeing it."
+        android:layout_height="wrap_content" />
+</LinearLayout>

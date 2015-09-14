@@ -1,0 +1,39 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">0dp</dimen>
+    <dimen name="activity_vertical_margin">0dp</dimen>
+
+    <!-- Movie detail dimension -->
+    <dimen name="movie_poster_size">185dp</dimen>
+    <dimen name="movie_list_item_padding">4dp</dimen>
+    <dimen name="movie_title_size">32sp</dimen>
+    <dimen name="movie_overview_size">18sp</dimen>
+    <dimen name="movie_overview_padding_top">4dp</dimen>
+    <dimen name="movie_empty_padding">8dp</dimen>
+    <dimen name="movie_empty_text_size">18sp</dimen>
+    <dimen name="movie_detail_elevation">4dp</dimen>
+    <dimen name="movie_rating_number_padding">4dp</dimen>
+    <dimen name="movie_detail_rating_bar_margin">16dp</dimen>
+    <dimen name="movie_rating_number_size">16dp</dimen>
+    <dimen name="movie_detail_card_padding">8dp</dimen>
+    <dimen name="movie_favourite_padding">16dp</dimen>
+    <dimen name="favourite_toggle_size">36dp</dimen>
+    <dimen name="movie_detail_release_size">22sp</dimen>
+
+    <!-- Movie grid -->
+    <dimen name="movie_grid_column_width">150dp</dimen>
+    <dimen name="movie_grid_item_height">200dp</dimen>
+
+    <!-- Common size for empty lists in Detail View -->
+    <dimen name="movie_empty_lists_size">14dp</dimen>
+
+    <!-- Movie reviews -->
+    <dimen name="movie_review_text_size">16sp</dimen>
+    <dimen name="movie_review_content_size">12sp</dimen>
+    <dimen name="trailers_empty_margin_bottom">4dp</dimen>
+    <dimen name="movie_trailer_name_margin_start">4dp</dimen>
+    <dimen name="movie_trailers_list_divider_height">1dp</dimen>
+    <dimen name="movie_detail_release_date_holder_padding">4dp</dimen>
+
+    <dimen name="movie_two_pane_grid_width">300dp</dimen>
+</resources>

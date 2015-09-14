@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Possible ways to sort movies grid -->
+    <string-array name="sort_by">
+        <item>@string/pref_sort_popularity_title</item>
+        <item>@string/pref_sort_rating_title</item>
+        <item>@string/pref_sort_favourite_title</item>
+    </string-array>
+    <!-- Values for the selected sorting. Should correspond to the string array -->
+    <string-array name="sort_by_values">
+        <item>@string/pref_sort_popularity</item>
+        <item>@string/pref_sort_rating</item>
+        <item>@string/pref_sort_favourite</item>
+    </string-array>
+</resources>

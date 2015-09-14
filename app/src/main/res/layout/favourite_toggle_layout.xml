@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ToggleButton
+        android:id="@+id/favourite_toggle_btn"
+        android:layout_width="@dimen/favourite_toggle_size"
+        android:layout_height="@dimen/favourite_toggle_size"
+        android:textOff=""
+        android:textOn=""
+        tools:checked="true"
+        android:background="@drawable/favourite_toggle"
+        />
+</FrameLayout>
